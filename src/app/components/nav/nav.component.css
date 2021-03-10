@@ -1,0 +1,71 @@
+div.navbar {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    z-index: 10;
+}
+
+div.navbar div.buttonNav {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    /* display: none ; */
+}
+div.navbar div.buttonNav:hover {
+    cursor: pointer;
+}
+
+div.navbar div.buttonNav div#buttonNav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+div.navbar div.buttonNav div#buttonNav div.circles {
+    width: 7px;
+    height: 7px;
+    background: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transition: ease-in-out all .3s;
+ 
+}
+div.navbar div.buttonNav div#buttonNav div.circles:first-child {
+    left: 5px;
+}
+div.navbar div.buttonNav div#buttonNav div.circles:last-child {
+    /* right: 5px; */
+    left: 35px;
+}
+div.navbar div.buttonNav div#buttonNav div.circles.center:last-child {
+   left: 50%;
+}
+div.navbar div.buttonNav div#buttonNav div.circles.center:first-child {
+    left: 50%;
+}
+div.navbar ul {
+    height: 100vh;
+    border: 1px solid green;
+    display: none;
+}
+
+div.navbar ul li {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+div.navbar ul li a {
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    border: 1px solid red;
+}
+

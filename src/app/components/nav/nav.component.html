@@ -1,0 +1,17 @@
+<div class="navbar">
+    <div (mouseenter)="mouseEnter($event)" (mouseleave)="mouseOut()" (click)="onClick()"  class="buttonNav">
+        <div id="buttonNav">
+            <div class="circles"></div>
+            <div class="circles"></div>
+            <div class="circles"></div>
+            <div class="circles"></div>
+            <div class="circles"></div>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li *ngFor="let link of nav"><a href="#{{link}}">{{link}}</a></li>
+        </ul>
+    </div>
+
+</div>
