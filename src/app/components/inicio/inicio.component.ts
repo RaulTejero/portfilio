@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorService } from 'src/app/services/author.service';
 
 @Component({
   selector: 'app-inicio',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
+  name:string;
+  roll:string;
+  constructor(private AuthorService:AuthorService) {
+    
+  }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.name = await this.AuthorService.getName();
+    console.log(this.name);
+    this.roll = await this.AuthorService.getRoll();
+    console.log(this.roll);
   }
 
 }

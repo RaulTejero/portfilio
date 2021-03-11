@@ -59,6 +59,7 @@ img {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
+
 :root {
     --colorWhite:rgb(208, 208, 208);
     --colorGrey: rgb(73, 73, 73);
@@ -71,3 +72,4 @@ body {
     background-color: var(--backColor);
     color: var(--colorWhite);
 }
+

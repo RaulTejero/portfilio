@@ -1,0 +1,15 @@
+section{
+    font-weight: initial;
+}
+section p span {
+    font-weight: 900;
+}
+div.img {
+    width: 110px;
+    height: 110px;
+    animation: transitionImg .3s ease-in-out;
+    margin: 0 auto 30px;
+}
+p {
+    margin: auto auto 15px;
+}

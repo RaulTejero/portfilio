@@ -40,42 +40,61 @@ export class NavComponent implements OnInit {
     if (this.clickBtnBoolean == false) {
       this.addclass(this.circlesBtn[0], "center");
       this.addclass(this.circlesBtn[3], "center");
+      this.circlesBtn.forEach(el => {
+        this.addclass(el, "shadow");
+      });
+    } else {
+      console.log("haz esto");
+      this.removeclass(this.circlesBtn[0], "topLeft");
+      this.removeclass(this.circlesBtn[1], "topRight");
+      this.removeclass(this.circlesBtn[3], "bottomRight");
+      this.removeclass(this.circlesBtn[4], "bottomLeft");
+      this.circlesBtn.forEach(el => {
+        this.addclass(el, "shadow");
+      });
     }
+    console.log(this.clickBtnBoolean);
+
   }
 
   mouseOut() {
     if (this.clickBtnBoolean == false) {
       this.removeclass(this.circlesBtn[0], "center");
       this.removeclass(this.circlesBtn[3], "center");
+      this.circlesBtn.forEach(el => {
+        this.removeclass(el, "shadow");
+      });
+    } else {
+      this.addclass(this.circlesBtn[0], "topLeft");
+      this.addclass(this.circlesBtn[1], "topRight");
+      this.addclass(this.circlesBtn[3], "bottomRight");
+      this.addclass(this.circlesBtn[4], "bottomLeft");
+      this.circlesBtn.forEach(el => {
+        this.removeclass(el, "shadow");
+      });
     }
+    console.log(this.clickBtnBoolean);
   }
 
   onClick() {
 
 
     if (this.clickBtnBoolean == false) {
-      this.addclass(this.circlesBtn[0], "topLeft");
-      this.addclass(this.circlesBtn[1], "topRight");
-      this.addclass(this.circlesBtn[3], "bottomRight");
-      this.addclass(this.circlesBtn[4], "bottomLeft");
       this.addclass(this.divContainer, "open");
       this.removeclass(this.divContainer, "closed");
-
+      this.circlesBtn.forEach(el => {
+        this.addclass(el, "shadow");
+      });
       this.clickBtnBoolean = !this.clickBtnBoolean;
     } else {
-      this.removeclass(this.circlesBtn[0], "topLeft");
-      this.removeclass(this.circlesBtn[1], "topRight");
-      this.removeclass(this.circlesBtn[3], "bottomRight");
-      this.removeclass(this.circlesBtn[4], "bottomLeft");
       this.removeclass(this.divContainer, "open");
       this.addclass(this.divContainer, "closed");
       setTimeout(() => {
-       this.removeclass(this.divContainer,"closed");
+        this.removeclass(this.divContainer, "closed");
       }, 2000);
-
       this.clickBtnBoolean = !this.clickBtnBoolean;
     }
-    console.log(this.divContainer);
+    console.log(this.clickBtnBoolean);
   }
 
 
