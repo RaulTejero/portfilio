@@ -9,52 +9,76 @@ import { NavService } from 'src/app/services/nav.service';
 export class NavComponent implements OnInit {
 
   nav: string[];
-  click: boolean;
-  childsNodes: any;
-  navElement: any;
+  clickBtnBoolean: boolean;
+  hoverNavBoolean: boolean;
+  circlesBtn: any;
+  divContainer: any;
+  divContainerNav: any;
 
   constructor(private NavService: NavService) {
     this.nav = [];
-    this.click = false;
+    this.clickBtnBoolean = false;
   }
 
   async ngOnInit() {
     this.nav = await this.NavService.getAllNav();
-
-    this.navElement = document.querySelector("div.navbar>div:last-child>ul")
-    console.log(this.navElement);
-    
-
+    this.divContainer = document.querySelector("div.container");
+    this.circlesBtn = document.querySelectorAll("div.circles");
+    console.log(this.divContainer);
+    this.divContainerNav = document.querySelector("div.containerNavbar");
   }
-  mouseEnter(event) {
-    this.childsNodes = event.target.childNodes[0].childNodes;
-    this.childsNodes[0].classList.add("center");
-    this.childsNodes[4].classList.add("center");
-    console.log(this.childsNodes[0].classList);
-    console.log("dentro");
+
+  addclass(element, className) {
+    element.classList.add(className)
+  }
+
+  removeclass(element, className) {
+    element.classList.remove(className)
+  }
+
+  mouseEnter() {
+    if (this.clickBtnBoolean == false) {
+      this.addclass(this.circlesBtn[0], "center");
+      this.addclass(this.circlesBtn[3], "center");
+    }
   }
 
   mouseOut() {
-    this.childsNodes[0].classList.remove("center");
-    this.childsNodes[4].classList.remove("center");
-    console.log(this.childsNodes[0].classList);
-  }
-  onClick(){
-    console.log(this.click);
-    
-    if(this.click == false){
-      this.navElement.style.display = "block";
-      this.click = !this.click;
-    }else {
-      this.navElement.style.display = "none";
-      this.click = !this.click;
+    if (this.clickBtnBoolean == false) {
+      this.removeclass(this.circlesBtn[0], "center");
+      this.removeclass(this.circlesBtn[3], "center");
     }
-    
-
-
-    console.log("click");
-    
   }
+
+  onClick() {
+
+
+    if (this.clickBtnBoolean == false) {
+      this.addclass(this.circlesBtn[0], "topLeft");
+      this.addclass(this.circlesBtn[1], "topRight");
+      this.addclass(this.circlesBtn[3], "bottomRight");
+      this.addclass(this.circlesBtn[4], "bottomLeft");
+      this.addclass(this.divContainer, "open");
+      this.removeclass(this.divContainer, "closed");
+
+      this.clickBtnBoolean = !this.clickBtnBoolean;
+    } else {
+      this.removeclass(this.circlesBtn[0], "topLeft");
+      this.removeclass(this.circlesBtn[1], "topRight");
+      this.removeclass(this.circlesBtn[3], "bottomRight");
+      this.removeclass(this.circlesBtn[4], "bottomLeft");
+      this.removeclass(this.divContainer, "open");
+      this.addclass(this.divContainer, "closed");
+      setTimeout(() => {
+       this.removeclass(this.divContainer,"closed");
+      }, 2000);
+
+      this.clickBtnBoolean = !this.clickBtnBoolean;
+    }
+    console.log(this.divContainer);
+  }
+
 
 
 }
+

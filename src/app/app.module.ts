@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ContactComponent
+    ContactComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
