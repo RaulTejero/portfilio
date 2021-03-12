@@ -9,14 +9,8 @@ import { NavService } from 'src/app/services/nav.service';
 export class NavComponent implements OnInit {
 
   nav: string[];
-  clickBtnBoolean: boolean;
-  hoverNavBoolean: boolean;
-
-  hoverBtn: boolean;
   clickBtn: boolean;
-  // hoverLinks: boolean;
   clickLinks: boolean;
-
   circlesBtn: any;
   divContainer: any;
   divContainerNav: any;
@@ -24,13 +18,7 @@ export class NavComponent implements OnInit {
 
   constructor(private NavService: NavService) {
     this.nav = [];
-    this.clickBtnBoolean = false;
-    this.hoverNavBoolean = false;
-
-
-    this.hoverBtn = false;
     this.clickBtn = false;
-    // this.hoverLinks = false;
     this.clickLinks = false;
   }
 
@@ -39,16 +27,13 @@ export class NavComponent implements OnInit {
     this.divContainer = document.querySelector("div.container");
     this.circlesBtn = document.querySelectorAll("div.circles");
     this.divContainerNav = document.querySelector("div.containerNavbar");
-    console.log(this.clickBtn);
-    console.log(this.divContainer.classList);
-    
   }
 
-  addclass(element,className) {
+  addclass(element, className) {
     element.classList.add(className);
   }
 
-  removeclass(element,className) {
+  removeclass(element, className) {
     element.classList.remove(className);
   }
 
@@ -79,26 +64,22 @@ export class NavComponent implements OnInit {
       this.addclass(this.circlesBtn[4], "bottomLeft");
     }
   }
-  // (window.innerWidth <= 800)
   onClick() {
-      if (this.clickBtn != true) {
-        this.addclass(this.divContainer, "open");
+    if (this.clickBtn != true) {
+      this.addclass(this.divContainer, "open");
+      this.removeclass(this.divContainer, "closed");
+      setTimeout(() => {
         this.removeclass(this.divContainer, "closed");
-        setTimeout(() => {
-          this.removeclass(this.divContainer, "closed");
-        }, 2000);
-        this.clickBtn = !this.clickBtn;
-      } else {
-        this.removeclass(this.divContainer, "open");
-        this.addclass(this.divContainer, "closed");
-        this.clickBtn = !this.clickBtn;
-      }
+      }, 2000);
+      this.clickBtn = !this.clickBtn;
+    } else {
+      this.removeclass(this.divContainer, "open");
+      this.addclass(this.divContainer, "closed");
+      this.clickBtn = !this.clickBtn;
+    }
   }
   onClickLink() {
     if (window.innerWidth <= 800) {
-       console.log("click");
-      console.log(this.clickBtn);
-      console.log(this.circlesBtn[1].classList);
       this.removeclass(this.divContainer, "open");
       this.addclass(this.divContainer, "closed");
       this.removeclass(this.circlesBtn[0], "topLeft");
@@ -108,10 +89,8 @@ export class NavComponent implements OnInit {
       this.removeclass(this.circlesBtn[0], "center");
       this.removeclass(this.circlesBtn[3], "center");
       this.clickBtn = !this.clickBtn;
-      console.log(this.clickBtn);
-      console.log(this.divContainer.classList);
     }
-     
+
   }
 
   enterLink(event) {
