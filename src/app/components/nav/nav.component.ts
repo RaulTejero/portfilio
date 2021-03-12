@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
   circlesBtn: any;
   divContainer: any;
   divContainerNav: any;
+  linksNav: any;
 
   constructor(private NavService: NavService) {
     this.nav = [];
@@ -24,8 +25,7 @@ export class NavComponent implements OnInit {
     this.nav = await this.NavService.getAllNav();
     this.divContainer = document.querySelector("div.container");
     this.circlesBtn = document.querySelectorAll("div.circles");
-    console.log(this.divContainer);
-    this.divContainerNav = document.querySelector("div.containerNavbar");
+    this.divContainerNav = document.querySelector("div.containerNavbar");  
   }
 
   addclass(element, className) {
@@ -54,7 +54,7 @@ export class NavComponent implements OnInit {
       });
     }
     console.log(this.clickBtnBoolean);
-
+    // ----------------
   }
 
   mouseOut() {
@@ -74,12 +74,13 @@ export class NavComponent implements OnInit {
       });
     }
     console.log(this.clickBtnBoolean);
+    // --------
   }
 
   onClick() {
 
-
-    if (this.clickBtnBoolean == false) {
+    if (window.innerWidth <= 800) {
+      if (this.clickBtnBoolean == false) {
       this.addclass(this.divContainer, "open");
       this.removeclass(this.divContainer, "closed");
       this.circlesBtn.forEach(el => {
@@ -94,9 +95,31 @@ export class NavComponent implements OnInit {
       }, 2000);
       this.clickBtnBoolean = !this.clickBtnBoolean;
     }
+    }
+    
     console.log(this.clickBtnBoolean);
   }
 
+  enterLink(event){
+    this.linksNav = document.querySelectorAll("a");
+    
+    this.linksNav.forEach(el => {
+      this.addclass(el,"hoverLinks");
+      if (event.target.textContent == el.textContent) {
+        this.removeclass(event.target,"hoverLinks");
+        this.addclass(event.target,"transition");
+      }
+    });
+    
+    
+  }
+  outLink(event){
+ 
+    this.linksNav.forEach(el => {
+      this.removeclass(el,"hoverLinks");
+      this.removeclass(event.target,"transition");
+    });
+  }
 
 
 }

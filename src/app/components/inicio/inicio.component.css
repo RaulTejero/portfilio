@@ -3,11 +3,12 @@ div.container{
     background-image:linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url("../../../assets/img/pexels-thisisengineering-3861969.jpg");
+      ), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-pixabay-414860%20(1).jpg?alt=media&token=c960ddcc-a280-48ad-96b0-8e85bddaa953");
     width: 100%;
     height: 100vh;
-    background-size: cover;
+    background-size:contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 div.container div.title {
     display: flex;
@@ -23,6 +24,7 @@ div.container div.title div {
     height: 8vw;
     width: 3px;
     background-color: var(--colorWhite);
+    animation: on 6s;
 }
 div.container div.title h1,div.container div.title h2 {
         margin:auto 20px;
@@ -30,8 +32,46 @@ div.container div.title h1,div.container div.title h2 {
 }
 div.container div.title h1 {
     font-size: 7vw;
+    animation: onTitle 5s ease-in-out;
 }
 div.container div.title h2 {
     font-size: 2vw;
     font-family: 'Press Start 2P', cursive;
+    animation: onRoll 7s ease-in-out;
+}
+
+@keyframes on {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    70% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+@keyframes onTitle {
+    0% {
+      color: rgba(0, 0, 0, 0);
+    }
+    70% {
+        color: rgba(0, 0, 0, 0);
+    }
+}
+@keyframes onRoll {
+    0% {
+      color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
+    }
+    70% {
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+@media(min-width:720px) {
+    div.container{
+        width: 100%;
+        height: 100vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

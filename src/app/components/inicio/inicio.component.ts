@@ -15,9 +15,7 @@ export class InicioComponent implements OnInit {
 
   async ngOnInit() {
     this.name = await this.AuthorService.getName();
-    console.log(this.name);
     this.roll = await this.AuthorService.getRoll();
-    console.log(this.roll);
   }
 
 }

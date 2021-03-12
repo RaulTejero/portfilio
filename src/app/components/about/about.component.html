@@ -1,8 +1,9 @@
-<!-- <div class="img">
-    <img src={{img}} alt="foto">
-    foto
-</div> -->
-<section>
-   <p *ngFor="let text of texts">{{text}}</p>
-</section>
-
+<div class="container" (mouseenter)="mouseEnter()">
+   <h1 id={{id}}>¿Quién soy?</h1>
+   <section>
+      <div class="img"></div>
+      <div>
+         <p *ngFor="let text of texts">{{text}}</p>
+      </div>
+   </section>
+</div>

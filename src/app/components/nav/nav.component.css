@@ -147,8 +147,9 @@ div.container.closed div.header div.containerNavbar {
 
 div.container div.header div.containerNavbar ul li a {
     display: block;
-    width: 100%;
-    padding: 25px 0;
+    width: max-content;
+    margin: auto;
+    padding: 15px 0;
     margin-top: 25px;
 }
 div.container.open div.header div.containerNavbar ul li a:hover {
@@ -194,9 +195,7 @@ div.container.open div.header div.containerNavbar ul li a:hover {
 @media(min-width: 800px ) {
     div.container.open  {
         background-color: initial;
-        /* animation: onBackground .6s ease-in-out; */
         height:auto;
-        /* transition: .3s ease-in-out; */
     }
     div.container div.buttonNav {
        display: none;
@@ -208,33 +207,16 @@ div.container.open div.header div.containerNavbar ul li a:hover {
        color: var(--colorWhite);
 
     }
-    div.container div.header div.logo {
-        /* margin: initial; */
-        /* padding:25px; */
-
-    }
     div.container div.header div.containerNavbar ul {
         display: flex;
         justify-content: space-around;
-        /* transform: translateY(0); */
-        /* width: 70%; */
-     }
-     div.container div.header div.containerNavbar ul li a{
-        /* padding: auto 40px */
-     }
-
-    div.container div.header div.containNavbar ul {
-        /* height: auto; */
-        /* transform: translateY(0); */
-        /* display: flex; */
-        /* flex-direction: row; */
-        /* background-color: inherit; */
     }
-    div.container div.containNavbar ul li a {
-        /* padding: 30px; */
-        /* color: ivory; */
-        /* font-weight: 900; */
-        /* width: auto; */
+    div.container div.header div.containerNavbar ul a {
+        transition: .3s ease-in-out;
     }
+    div.container div.header div.containerNavbar ul a.hoverLinks {
+        color: rgba(0, 0, 0, 0);  
+    }
+    
 
 }

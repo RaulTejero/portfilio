@@ -1,15 +1,55 @@
-section{
-    font-weight: initial;
+div.container {
+    width: 100%;
 }
-section p span {
-    font-weight: 900;
+
+div.container h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin: 50px auto;
+    z-index: 4;
 }
-div.img {
-    width: 110px;
-    height: 110px;
-    animation: transitionImg .3s ease-in-out;
-    margin: 0 auto 30px;
+
+div.container section div.img {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7");
+    width: 100%;
+    height: 400px;
+    /* margin-top: -70px; */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.597);
+    ;
+    background-blend-mode: multiply;
 }
-p {
+
+div.container section div:nth-child(2) {
+    margin-top: -100px;
+}
+
+div.container section p {
     margin: auto auto 15px;
+    /* color: rgba(0, 0, 0, 0); */
+    color: var(--colorWhite )
+}
+
+div.contanoiner section p {
+    
+}
+/* TODO:  no cmabia*/
+@media(min-width: 800px) {
+    div.container h1 {
+        font-size: 3.5em;
+    }
+    div.container section {
+        display: flex;
+    }
+    div.container section div.img {
+        width: 500px;
+        margin-top: -40px;
+    }
+    div.container section div:nth-child(2) {
+        width: 75%;
+        margin-top: 70px;
+        margin-left: -100px;
+    }
 }
