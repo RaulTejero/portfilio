@@ -20,12 +20,12 @@ export class AboutComponent implements OnInit {
     this.id = this.ids[1];
     this.divContainer = document.querySelector
     ("div.container");
-    console.log(this.divContainer.classList);
+    // console.log(this.divContainer.classList);
     
   }
   mouseEnter() {
   this.divContainer.classList.remove("enter");
-    console.log(this.divContainer.classList);
+    // console.log(this.divContainer.classList);
     // TODO: no cambia 
   }
 

@@ -14,7 +14,7 @@
         </div>
         <div class="containerNavbar">
             <ul class="">
-                <li *ngFor="let link of nav"><a (click)="onClick()" (mouseenter)="enterLink($event)" (mouseleave)="outLink($event)" href="#{{link}}">{{link}}</a></li>
+                <li *ngFor="let link of nav"><a (click)="onClickLink()" (mouseenter)="enterLink($event)" (mouseleave)="outLink($event)" href="#{{link}}">{{link}}</a></li>
             </ul>
         </div>
     </div>

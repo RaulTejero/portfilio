@@ -2,7 +2,7 @@
 div.container  {
     position: fixed;
     width: 100%;
-    z-index: 9;
+    z-index: 10;
     font-family: 'Audiowide', cursive;
 }
 
@@ -65,6 +65,7 @@ div.container div.header div.buttonNav div.circles {
 div.container div.header div.buttonNav div.circles.shadow { 
     box-shadow: 0px 0px 7px 2px rgba(255,255,255,0.97);
 }
+
 div.container div.header div.buttonNav div#buttonNav div.circles:first-child {
     top: 50%;
     left: 0;
@@ -132,13 +133,14 @@ div.container div.header div.containerNavbar {
     transform: translateY(-100vh);
 }
 
+
 div.container.open div.header div.containerNavbar {
     display: block;
     transform: translateY(0);
     animation: blocked 3s;
 }
 div.container.closed div.header div.containerNavbar {
-    transform: translateY(-100vh);
+    transform: translateY(-100vh); 
     animation: closed 3s;
     color: var(--backColor);
     display: block;
@@ -200,13 +202,20 @@ div.container.open div.header div.containerNavbar ul li a:hover {
     div.container div.buttonNav {
        display: none;
     }
+    div.container.closed div.header div.containerNavbar {
+        display: block;
+       transform: translateY(0);
+       width: 80%;
+       color: var(--colorWhite);
+    }
     div.container div.header div.containerNavbar {
        display: block;
        transform: translateY(0);
        width: 80%;
        color: var(--colorWhite);
-
     }
+   
+    
     div.container div.header div.containerNavbar ul {
         display: flex;
         justify-content: space-around;
