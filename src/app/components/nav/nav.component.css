@@ -158,6 +158,25 @@ div.container.open div.header div.containerNavbar ul li a:hover {
     color: var(--colorWhite);
 }
 
+div.animated {
+    animation-duration: 9s;
+    animation-fill-mode: both;
+}
+
+div.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 @keyframes onBackground {

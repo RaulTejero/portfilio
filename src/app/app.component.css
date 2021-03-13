@@ -1,5 +1,26 @@
-div.wrapper {
+
+div.container div.wrapper {
     width: 90%;
     margin:auto;
     max-width: 1200px ;
 }
+div.animated {
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

@@ -1,25 +1,22 @@
 div.containerAbout {
     width: 100%;
-    border: 1px solid red;
 }
 
 div.containerAbout h1 {
     font-size: 8vw;
     text-align: center;
     margin: 50px auto;
-    /* z-index: 5; */
 }
 
 div.containerAbout section div.img {
-    border: 1px solid red;
     width: 100%;
     height: 400px;
     position: relative;
 }
 div.containerAbout section div.img div.imgBackg {
     background-image:linear-gradient(
-    rgba(0, 0, 0, 0.311),
-    rgba(0, 0, 0, 0.927)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7");
+    rgba(0, 0, 0, 0.247),
+    rgba(0, 0, 0, 0.836)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7");
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -27,23 +24,18 @@ div.containerAbout section div.img div.imgBackg {
     background-repeat: no-repeat;  
 }
 div.containerAbout section div.img div.black {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.256);
+    /* TODO: tapa o no la foto */
     width: 100%;
     height: 100%;
     position: absolute;
     top: 100px;
     left: 0;
-    
 }
 div.containerAbout section div.img.mouseEnter div.black {
     transition: all 2s ease-in-out;
     background-color: rgba(0, 0, 0, 0);
 }
-/* background-image:linear-gradient(
-    rgba(0, 0, 0, 0.311),
-    rgba(0, 0, 0, 0.927)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7"); */
-
-
 
 div.containerAbout section div:nth-child(2) {
     margin-top: -100px;
@@ -51,7 +43,8 @@ div.containerAbout section div:nth-child(2) {
 
 div.containerAbout section p {
     margin: auto auto 15px;
-    color: rgba(0, 0, 0, 0);
+    color: rgb(247, 247, 247);
+    /* TODO: cambiar tranparencia */
     transition: .5s ease-in-out;
     position: relative;
     z-index: 5;
@@ -62,18 +55,24 @@ div.containerAbout section p.mouseEnter {
 
 @media(min-width: 800px) {
     div.containerAbout h1 {
-        /* font-size: 3.5em; */
+        font-size: 3.5em;
     }
     div.containerAbout section {
-        /* display: flex; */
+        display: flex;
     }
     div.containerAbout section div.img {
-        /* width: 500px; */
-        /* margin-top: -40px; */
+        width: 500px;
+        margin-top: -40px;
+    }
+    div.containerAbout section div.img div.black {
+        width: 100%;
+        height: 100%;
+        top: -70px;
+        left: 100px;
     }
     div.containerAbout section div:nth-child(2) {
-        /* width: 75%; */
-        /* margin-top: 70px; */
-        /* margin-left: -100px; */
+        width: 75%;
+        margin-top: 70px;
+        margin-left: -100px;
     }
 }
