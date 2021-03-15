@@ -2,36 +2,17 @@ div.wrapper {
     width: 90%;
     margin:auto;
     max-width: 1200px ;
-    animation: up 5s ease-in-out;
-    animation-duration: 9s;
-    animation-fill-mode: both;
-    animation-name: fadeIn 2s;
-}
-div.wrapper.animated.fadeIn {
-    
+    animation: inicio 3.8s both ease-in-out;
 }
 
-div.wrapper.animated.fadeIn {
-    
-}
-
-
-
-@keyframes fadeIn {
+@keyframes inicio {
     0% {
         opacity: 0;
-    }25% {
+    }90% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
 }
-@keyframes up{
-    0% {
-        /* transform:translateY(100vh); */
-        /* display: none; */
-    }80% {
-        /* transform:translateY(100vh); */
-    }
-}
+
