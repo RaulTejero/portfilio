@@ -29,9 +29,12 @@ div.container div.header {
 div.container div.header div.logo {
     z-index: 10;
     margin: 25px;
-    border: 5px solid red;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/rts-removebg-preview%20(2).png?alt=media&token=52ffd35a-7773-42f0-bc2d-8304754f3ed4");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 50px;
-    width: 50px;
+    width: 120px;
 }
 
 div.container div.header div.buttonNav {
@@ -149,6 +152,7 @@ div.container.closed div.header div.containerNavbar {
 div.container div.header div.containerNavbar ul li a {
     display: block;
     width: max-content;
+    font-size: .8em;
     margin: auto;
     padding: 15px 0;
     margin-top: 25px;
@@ -212,7 +216,7 @@ div.fadeIn {
     }
 }
 
-@media(min-width: 800px ) {
+@media(min-width: 900px ) {
     div.container.open  {
         background-color: initial;
         height:auto;

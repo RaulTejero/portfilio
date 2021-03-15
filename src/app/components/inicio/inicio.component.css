@@ -19,21 +19,27 @@ div.container div.title {
     transform: translate(-50%, -50%);
     width: 100%;
 }
-div.container div.title div {
+div.container div.title div.name {
+    width: 40%;
+    height: 8vw;
+    margin-right: 5px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/rts-removebg-preview%20(2).png?alt=media&token=52ffd35a-7773-42f0-bc2d-8304754f3ed4");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+div.container div.title div.lineSeparation {
     height: min-content;
     height: 8vw;
     width: 3px;
     background-color: var(--colorWhite);
     animation: on 6s;
 }
-div.container div.title h1,div.container div.title h2 {
+div.container div.title h2 {
         margin:auto 20px;
         text-align: center;
 }
-div.container div.title h1 {
-    font-size: 7vw;
-    animation: onTitle 5s ease-in-out;
-}
+
 div.container div.title h2 {
     font-size: 2vw;
     font-family: 'Press Start 2P', cursive;
