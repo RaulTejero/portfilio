@@ -76,7 +76,10 @@ body::-webkit-scrollbar-thumb:hover {
 :root {
     --colorWhite:rgb(240, 240, 240);
     --colorGrey: rgb(114, 114, 114);
-    --backColor:  rgb(0, 0, 0);
+    --backColor:  rgb(14, 14, 14);
+	--backColorTraSup:  rgba(14, 14, 14, 0.112);
+	--backColorTraDow:  rgba(14, 14, 14, 0.961);
+	--borderRadius: 20px;
 }
 
 body {

@@ -15,8 +15,8 @@ div.containerAbout section div.img {
 }
 div.containerAbout section div.img div.imgBackg {
     background-image:linear-gradient(
-    rgba(0, 0, 0, 0.247),
-    rgba(0, 0, 0, 0.836)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7");
+    var(--backColorTraSup),
+    var(--backColorTraDow)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/WhatsApp_Image_2021-03-12_at_09.33.40-1removebg.png?alt=media&token=d43374a3-5de4-49cf-88bf-185a8af71eb7");
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -24,8 +24,7 @@ div.containerAbout section div.img div.imgBackg {
     background-repeat: no-repeat;  
 }
 div.containerAbout section div.img div.black {
-    background-color: rgba(0, 0, 0, 0.256);
-    /* TODO: tapa o no la foto */
+    /* background-color: va; */
     width: 100%;
     height: 100%;
     position: absolute;

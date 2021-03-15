@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-div.container {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-pixabay-414860%20(1).jpg?alt=media&token=c960ddcc-a280-48ad-96b0-8e85bddaa953");
+div.containerInicio {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-ali-pazani-2777898.jpg?alt=media&token=3bed7c02-5802-485a-92df-7c19e70628c7");
     width: 100%;
     height: 100vh;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: left, top !important;
 }
 
-div.container div.title {
+div.containerInicio div.title {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -18,7 +17,7 @@ div.container div.title {
     width: 100%;
 }
 
-div.container div.title div.name {
+div.containerInicio div.title div.name {
     width: 40%;
     height: 8vw;
     margin-right: 5px;
@@ -28,7 +27,7 @@ div.container div.title div.name {
     background-repeat: no-repeat;
 }
 
-div.container div.title div.lineSeparation {
+div.containerInicio div.title div.lineSeparation {
     height: min-content;
     height: 8vw;
     width: 3px;
@@ -36,18 +35,18 @@ div.container div.title div.lineSeparation {
     animation: on 6s;
 }
 
-div.container div.title h2 {
+div.containerInicio div.title h2 {
     margin: auto 20px;
     text-align: center;
 }
 
-div.container div.title h2 {
+div.containerInicio div.title h2 {
     font-size: 2vw;
     font-family: 'Press Start 2P', cursive;
     animation: onRoll 7s ease-in-out;
 }
 
-div.container div.title h2 span.loop {
+div.containerInicio div.title h2 span.loop {
     animation: loop 1s infinite;
 }
 
@@ -86,7 +85,7 @@ div.container div.title h2 span.loop {
 }
 
 @media(min-width:720px) {
-    div.container {
+    div.containerInicio {
         width: 100%;
         height: 100vh;
         background-size: contain;
