@@ -2,3 +2,14 @@ div.containerTechnologies {
     border-radius: 20px;
     text-align: center;
 }
+div.containerTechnologies section {
+    display: flex;
+    flex-wrap: wrap ;
+}
+div.containerTechnologies section>div {
+    border: 1px solid red;
+    height: 13vw;
+    width: 20%;
+    position: relative;
+    /* margin: ; */
+}

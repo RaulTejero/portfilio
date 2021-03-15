@@ -25,8 +25,6 @@ export class NavComponent implements OnInit {
     this.divContainer = document.querySelector("div.container");
     this.circlesBtn = document.querySelectorAll("div.circles");
     this.divContainerNav = document.querySelector("div.containerNavbar");
-    console.log(this.clickBtn);
-    
   }
 
   addclass(element,className) {

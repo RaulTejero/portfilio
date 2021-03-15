@@ -1,7 +1,10 @@
-
 <div class="containerTechnologies">
     <h1>Tecnologias</h1>
     <section>
-        <div class="imgTechnologies"></div>
+        <div *ngFor="let technologie of technologies">
+            <div >
+                <h3>{{technologie.title}}</h3>
+            </div>
+        </div>
     </section>
 </div>
