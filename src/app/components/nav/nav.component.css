@@ -8,15 +8,14 @@ div.container  {
 
 div.container.open  {
     background-color: var(--backColor);
-    animation: onBackground .6s ease-in-out;
+    animation: onBackground .7s ease-in-out;
     height: 100vh;
-    transition: .3s ease-in-out;
 }
 div.container.closed{
     background-color: initial;
     animation: offBackground 2s ease-in-out;
     transition: .3s ease-in-out;
-    transition-delay: 1.3s;
+    transition-delay: 1.1s;
 }
 
 div.container div.header {
@@ -137,7 +136,7 @@ div.container div.header div.containerNavbar {
 div.container.open div.header div.containerNavbar {
     display: block;
     transform: translateY(0);
-    animation: blocked 3s;
+    animation: blocked 2s;
 }
 div.container.closed div.header div.containerNavbar {
     transform: translateY(-100vh); 
