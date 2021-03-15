@@ -1,15 +1,30 @@
 div.containerTechnologies {
-    border-radius: 20px;
+    border-radius: var(--borderRadius);
     text-align: center;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-moose-photos-1036645.jpg?alt=media&token=6bca7914-c9be-408c-98b3-cbb9d4bcd239");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -120px;
+    padding: 20px;
 }
 div.containerTechnologies section {
     display: flex;
     flex-wrap: wrap ;
 }
 div.containerTechnologies section>div {
-    border: 1px solid red;
-    height: 13vw;
-    width: 20%;
+    padding: 20px;
+    /* height: 13vw; */
+    width: 33.333%;
     position: relative;
+    /* margin: 1%; */
     /* margin: ; */
+}
+div.containerTechnologies section>div>div {
+    /* border: 3px solid var(--backColor); */
+    /* border-radius: var(--borderRadius); */
+    height: 15vw;
+    background-image:url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/technologies%2FCSS3.png?alt=media&token=40ed44c2-3a01-487c-9035-0c4b3ca3ba0d");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center ;
 }

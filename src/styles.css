@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb:hover {
     --backColor:  rgb(14, 14, 14);
 	--backColorTraSup:  rgba(14, 14, 14, 0.112);
 	--backColorTraDow:  rgba(14, 14, 14, 0.961);
-	--borderRadius: 20px;
+	--borderRadius: 10px;
 }
 
 body {
