@@ -28,26 +28,11 @@ export class AboutComponent implements OnInit {
 
   
     window.addEventListener("scroll", () => {
-      // this.distance = this.divContainer.getBoundingClientRect().top;
-      this.heightWindow = window.innerHeight;
-      // console.log(this.heightWindow);
-      // console.log(this.distance);
-      // console.log(this.divContainer.getBoundingClientRect());
-      
-
+      this.heightWindow = window.innerHeight; 
     })
 
   }
 
 
-
-  // mouseEnter() {
-  //   console.log("entro");
-  //   console.log(this.elementsTexts);
-  //   this.elementsTexts.forEach(el => {
-  //     el.classList.add("mouseEnter");
-  //   });
-  //   this.img.classList.add("mouseEnter");
-  // }
 
 }

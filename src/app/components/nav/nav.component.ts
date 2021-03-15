@@ -65,6 +65,9 @@ export class NavComponent implements OnInit {
     }
   }
   onClick() {
+    console.log("entra");
+    console.log(this.clickBtn);
+    
     if (this.clickBtn != true) {
       this.addclass(this.divContainer, "open");
       this.removeclass(this.divContainer, "closed");
