@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-div.container{
-    background-image:linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-pixabay-414860%20(1).jpg?alt=media&token=c960ddcc-a280-48ad-96b0-8e85bddaa953");
+div.container {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-pixabay-414860%20(1).jpg?alt=media&token=c960ddcc-a280-48ad-96b0-8e85bddaa953");
     width: 100%;
     height: 100vh;
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 div.container div.title {
     display: flex;
     justify-content: center;
@@ -19,6 +17,7 @@ div.container div.title {
     transform: translate(-50%, -50%);
     width: 100%;
 }
+
 div.container div.title div.name {
     width: 40%;
     height: 8vw;
@@ -28,6 +27,7 @@ div.container div.title div.name {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 div.container div.title div.lineSeparation {
     height: min-content;
     height: 8vw;
@@ -35,9 +35,10 @@ div.container div.title div.lineSeparation {
     background-color: var(--colorWhite);
     animation: on 6s;
 }
+
 div.container div.title h2 {
-        margin:auto 20px;
-        text-align: center;
+    margin: auto 20px;
+    text-align: center;
 }
 
 div.container div.title h2 {
@@ -45,29 +46,30 @@ div.container div.title h2 {
     font-family: 'Press Start 2P', cursive;
     animation: onRoll 7s ease-in-out;
 }
+
 div.container div.title h2 span.loop {
-  animation: loop 1s infinite;
-  
+    animation: loop 1s infinite;
 }
 
 @keyframes on {
     0% {
-      background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
     }
     70% {
         background-color: rgba(0, 0, 0, 0);
     }
 }
 
-@keyframes onTitle {
+/* @keyframes onTitle {
     0% {
       color: rgba(0, 0, 0, 0);
     }
     70% {
         color: rgba(0, 0, 0, 0);
     }
-}
-@keyframes onRoll {
+} */
+
+/* @keyframes onRoll {
     0% {
       color: rgba(0, 0, 0, 0);
       background-color: rgba(0, 0, 0, 0);
@@ -75,14 +77,16 @@ div.container div.title h2 span.loop {
     70% {
         color: rgba(0, 0, 0, 0);
     }
-}
+} */
+
 @keyframes loop {
     50% {
         color: rgba(20, 2, 2, 0);
     }
 }
+
 @media(min-width:720px) {
-    div.container{
+    div.container {
         width: 100%;
         height: 100vh;
         background-size: contain;

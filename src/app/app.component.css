@@ -1,17 +1,21 @@
-
-div.containerMain div.wrapper {
+div.wrapper {
     width: 90%;
     margin:auto;
     max-width: 1200px ;
-}
-div.animated {
-    animation-duration: 5s;
+    animation: up 5s ease-in-out;
+    animation-duration: 9s;
     animation-fill-mode: both;
+    animation-name: fadeIn 2s;
+}
+div.wrapper.animated.fadeIn {
+    
 }
 
-.fadeIn {
-    animation-name: fadeIn;
+div.wrapper.animated.fadeIn {
+    
 }
+
+
 
 @keyframes fadeIn {
     0% {
@@ -23,4 +27,11 @@ div.animated {
         opacity: 1;
     }
 }
-
+@keyframes up{
+    0% {
+        /* transform:translateY(100vh); */
+        /* display: none; */
+    }80% {
+        /* transform:translateY(100vh); */
+    }
+}
