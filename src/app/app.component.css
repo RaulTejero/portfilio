@@ -6,9 +6,7 @@ div.wrapper {
 div.animation {
     animation: inicio 3.8s both ease-in-out;
 }
-div.animation>div.main>div.inicio, div.animation>div.main>div.wrapper>div:nth-child(1n+1) {
-    margin-bottom: 150px ;
-}
+
 @keyframes inicio {
     0% {
         opacity: 0;

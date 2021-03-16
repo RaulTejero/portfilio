@@ -3,9 +3,10 @@ div.containerAbout {
 }
 
 div.containerAbout h1 {
-    font-size: 8vw;
+    font-size: 2em;
     text-align: center;
     margin: 50px auto;
+    padding-top: 150px;
 }
 
 div.containerAbout section div.img {
@@ -24,7 +25,6 @@ div.containerAbout section div.img div.imgBackg {
     background-repeat: no-repeat;  
 }
 div.containerAbout section div.img div.black {
-    /* background-color: va; */
     width: 100%;
     height: 100%;
     position: absolute;
@@ -54,7 +54,7 @@ div.containerAbout section p.mouseEnter {
 
 @media(min-width: 800px) {
     div.containerAbout h1 {
-        font-size: 3.5em;
+        /* font-size: 3.5em; */
     }
     div.containerAbout section {
         display: flex;

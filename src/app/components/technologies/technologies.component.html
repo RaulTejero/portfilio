@@ -2,11 +2,15 @@
     <h1>Tecnologias</h1>
     <section>
         <div *ngFor="let technologie of technologies">
-            <div >
+            <div (mouseenter)="enter($event)" (mouseleave)="out()"
+                [ngStyle]="{'backgroundImage':'url('+technologie.img+')'}">
                 <div>
-                    <h3>{{technologie.title}}</h3>
+                    <div>
+                    </div>
+                    <div>
+                        <h3>{{technologie.title}}</h3>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>

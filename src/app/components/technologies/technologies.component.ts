@@ -8,43 +8,27 @@ import { TechnologiesService } from 'src/app/services/technologies.service';
 })
 export class TechnologiesComponent implements OnInit {
   technologies: any;
-  $elementsTechnologies: any;
+  $elementsNameTechnologie: any;
+
   constructor(private Technologies: TechnologiesService ) { 
      this.technologies = [];
-     this.$elementsTechnologies = [];
+     this.$elementsNameTechnologie = [];
   }
  
-   ngOnInit(): void {
+   async ngOnInit(){
     
-    // this.technologies = await this.Technologies.getAll();
-    this.Technologies.getAll()
-    .then((resolve)=> {
-      setTimeout(() => {
-         this.technologies = resolve;
-      console.log(this.technologies);
-      }, 3000);
-     
-      
-      return "hecho"
-    })
-    .then((resolve)=> {
-      console.log(resolve);
-      
-      this.$elementsTechnologies = document.querySelectorAll("div.containerTechnologies>section>div");
-      console.log(this.$elementsTechnologies);
-    })
-    // TODO: estoy con esto 
+    this.technologies = await this.Technologies.getAll();
+  }
 
-    // console.log(this.technologies);
-
-
-
-    // setTimeout(() => {
-    //   this.$elementsTechnologies = document.querySelectorAll("div.containerTechnologies>section>div");
-    //   console.log(this.$elementsTechnologies);
-    // }, 2000);
+  enter(event) {
+    this.$elementsNameTechnologie = event.target.childNodes;
+    this.$elementsNameTechnologie[0].style.display = "block";
+    console.log("enter");
     
-    
+  }
+  
+  out() {
+    this.$elementsNameTechnologie[0].style.display = "none";
   }
 
 }
