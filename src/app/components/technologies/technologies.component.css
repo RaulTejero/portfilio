@@ -7,12 +7,9 @@ div.containerTechnologies {
     padding: 20px;
     margin-top: 150px;
     position: relative;
+    background-color: rgba(46, 22, 152, 0.167);
+    background-blend-mode: overlay;
 }
-div.containerTechnologies:hover {
-   
-}
-
-
 
 div.containerTechnologies h1{
     font-size: 2.5em;

@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
 
   async ngOnInit() {
     this.nav = await this.NavService.getAllNav();
-    this.divContainer = document.querySelector("div.container");
+    this.divContainer = document.querySelector("div.containerNav");
     this.circlesBtn = document.querySelectorAll("div.circles");
     this.divContainerNav = document.querySelector("div.containerNavbar");
   }
@@ -72,7 +72,9 @@ export class NavComponent implements OnInit {
         this.removeclass(this.divContainer, "open");
         this.addclass(this.divContainer, "closed");
         this.clickBtn = !this.clickBtn;
-      } 
+      }
+
+      
   }
   onClickLink() {
     if (window.innerWidth <= 900) {
