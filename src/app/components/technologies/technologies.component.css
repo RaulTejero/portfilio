@@ -5,14 +5,14 @@ div.containerTechnologies {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
-    transition: all 1s ease;
     margin-top: 150px;
+    position: relative;
 }
 div.containerTechnologies:hover {
-    
-    background-color: rgba(68, 64, 106, 0.537);
-     background-blend-mode: multiply;
+   
 }
+
+
 
 div.containerTechnologies h1{
     font-size: 2.5em;
@@ -23,6 +23,8 @@ div.containerTechnologies h1{
 div.containerTechnologies section {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
 }
 
 div.containerTechnologies section>div {
@@ -48,7 +50,6 @@ div.containerTechnologies section>div>div>div>div:first-child {
     height: 10px;
     width: 10px;
     background-color: var(--backColor);
-    /* background-color: rgb(124, 0, 128); */
     transform:translateY(-5px)  rotateZ(45deg) ;
     margin:auto auto -10px;
 }
@@ -59,6 +60,7 @@ div.containerTechnologies section>div>div>div>div h3 {
     background-color: var(--backColor);
     width: 55px;
     margin: auto;
+    border-radius:2px;
 }
 
 @media(min-width: 720px) {
@@ -76,9 +78,6 @@ div.containerTechnologies section>div>div>div>div h3 {
     }
 }
 @media(min-width: 980px) {
-    div.containerTechnologies section>div {
-        /* width: 16.66%; */
-    }
 }
 @media(min-width: 1200px) {
     div.containerTechnologies {

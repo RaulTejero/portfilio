@@ -72,15 +72,10 @@ export class NavComponent implements OnInit {
         this.removeclass(this.divContainer, "open");
         this.addclass(this.divContainer, "closed");
         this.clickBtn = !this.clickBtn;
-      }
-      console.log(this.clickBtn);
-      
+      } 
   }
   onClickLink() {
-    if (window.innerWidth <= 800) {
-       console.log("click");
-      console.log(this.clickBtn);
-      console.log(this.circlesBtn[1].classList);
+    if (window.innerWidth <= 900) {
       this.removeclass(this.divContainer, "open");
       this.addclass(this.divContainer, "closed");
       this.removeclass(this.circlesBtn[0], "topLeft");
@@ -90,8 +85,6 @@ export class NavComponent implements OnInit {
       this.removeclass(this.circlesBtn[0], "center");
       this.removeclass(this.circlesBtn[3], "center");
       this.clickBtn = !this.clickBtn;
-      console.log(this.clickBtn);
-      console.log(this.divContainer.classList);
     }
      
   }
