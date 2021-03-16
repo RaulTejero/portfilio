@@ -5,8 +5,12 @@ div.containerAbout {
 div.containerAbout h1 {
     font-size: 2em;
     text-align: center;
-    margin: 50px auto;
+    margin: 30px auto;
     padding-top: 150px;
+}
+div.containerAbout>div h3{
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 div.containerAbout section div.img {
@@ -42,8 +46,8 @@ div.containerAbout section div:nth-child(2) {
 
 div.containerAbout section p {
     margin: auto auto 15px;
+    font-size: .85em;
     color: rgb(247, 247, 247);
-    /* TODO: cambiar tranparencia */
     transition: .5s ease-in-out;
     position: relative;
     z-index: 5;
@@ -53,9 +57,6 @@ div.containerAbout section p.mouseEnter {
 }
 
 @media(min-width: 800px) {
-    div.containerAbout h1 {
-        /* font-size: 3.5em; */
-    }
     div.containerAbout section {
         display: flex;
     }
