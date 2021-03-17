@@ -1,19 +1,26 @@
+div.padding {
+    height: 1px;
+    width: 1px;
+    padding-top: var(--paddingTopSection);
+}
 div.containerTechnologies {
     border-radius: var(--borderRadius);
     text-align: center;
     background-image:  url("https://firebasestorage.googleapis.com/v0/b/webraultejero.appspot.com/o/pexels-moose-photos-1036645.jpg?alt=media&token=6bca7914-c9be-408c-98b3-cbb9d4bcd239");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 20px;
-    margin-top: 150px;
     position: relative;
     background-color: rgba(46, 22, 152, 0.167);
     background-blend-mode: overlay;
+    transition: .3 ease-in-out;
 }
 
 div.containerTechnologies h1{
-    font-size: 2.5em;
-    margin-bottom: 25px;
+    font-size: 2.3em;
+    margin-bottom: 35px;
+    font-weight: bold;
     color: var(--backColor);
 }
 
@@ -30,7 +37,6 @@ div.containerTechnologies section>div {
 }
 
 div.containerTechnologies section>div>div {
-
     width: 100%;
     height: 50px;
     background-size: contain;
@@ -59,25 +65,32 @@ div.containerTechnologies section>div>div>div>div h3 {
     margin: auto;
     border-radius:2px;
 }
-
-@media(min-width: 720px) {
-    div.containerTechnologies {
-        background-position-y: -100px;
-    }
-
-    div.containerTechnologies section>div {
-        width: 20%;
+@media(min-width: 470px) {
+    div.containerTechnologies  {
+        background-position-y: -20px;
     }
 }
+@media(min-width: 720px) {
+   
+    div.containerTechnologies section>div {
+        width: 20%;
+
+    }
+}
+
 @media(min-width: 900px) {
     div.containerTechnologies section>div {
         width: 20%;
     }
+    div.containerTechnologies {
+        background-position-y: -50px;
+    }
+
 }
 @media(min-width: 980px) {
 }
-@media(min-width: 1200px) {
+@media(min-width: 1000px) {
     div.containerTechnologies {
-        background-position-y: -170px;
+        background-position-y: -100px;
     }
 }

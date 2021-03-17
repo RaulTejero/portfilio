@@ -1,1 +1,23 @@
-<p>works works!</p>
+<div class="containerWorks">
+    <section>
+        <h1 id="Trabajos">Trabajos</h1>
+        <article>
+            <div *ngFor="let work of orderWorks">
+                <div class="work" [ngStyle]="{'backgroundImage':'url('+work.imgFirst+')'}">
+                    <div>
+                        <h3>{{work.title}}</h3>
+                        <ul>
+                            <li *ngIf="work.site != ''"><a href="{{work.site}}" target="_blank"
+                                    rel="noopener noreferrer"><i class="fas fa-globe"></i>Visitar</a></li>
+                            <li *ngIf="work.githubFrontLink != ''"><a href="{{work.githubFrontLink}}" target="_blank"
+                                    rel="noopener noreferrer"><i class="fab fa-github"></i>{{work.githubFront}}</a></li>
+                            <li *ngIf="work.githubBackLink != ''"><a href="{{work.githubBacktLink}}" target="_blank"
+                                    rel="noopener noreferrer"><i class="fab fa-github"></i>{{work.githubBack}}</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </section>
+</div>

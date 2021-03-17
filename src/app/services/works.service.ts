@@ -5,11 +5,11 @@ import {url} from '../url/url';
 @Injectable({
   providedIn: 'root'
 })
-export class TechnologiesService {
+export class WorksService {
 
   constructor(private HttpClient: HttpClient) { }
-  getAll(): Promise<string[]> {
-    let result = this.HttpClient.get<string[]>(url+"technologies.json").toPromise();
+  getAll(): Promise<any> {
+    let result = this.HttpClient.get<any>(url+"apps.json").toPromise();
     return result;
   }
 }

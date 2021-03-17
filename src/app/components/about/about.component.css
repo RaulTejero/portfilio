@@ -3,14 +3,17 @@ div.containerAbout {
 }
 
 div.containerAbout h1 {
-    font-size: 2em;
+    font-size: 2.3em;
+    font-weight: bold;
     text-align: center;
-    margin: 30px auto;
-    padding-top: 150px;
+    margin:0 auto 30px auto;
+    padding-top: var(--paddingTopSection);
 }
 div.containerAbout>div h3{
     margin-bottom: 50px;
     text-align: center;
+    font-weight: 500;
+    font-size: 1.6em;
 }
 
 div.containerAbout section div.img {
@@ -40,15 +43,15 @@ div.containerAbout section div:nth-child(2) {
 
 div.containerAbout section p {
     margin: auto auto 15px;
-    font-size: .85em;
+    font-size: 1em;
     color: rgb(247, 247, 247);
     transition: .5s ease-in-out;
     position: relative;
     z-index: 5;
 }
-div.containerAbout section p.mouseEnter {
+/* div.containerAbout section p.mouseEnter {
     color: var(--colorWhite);
-}
+} */
 
 @media(min-width: 800px) {
     div.containerAbout section {

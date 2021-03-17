@@ -3,6 +3,10 @@ div.wrapper {
     margin:auto;
     max-width: 1200px ;
 }
+div.wrapper section.padding {
+    padding: 0 50px;
+}
+
 div.animation {
     animation: inicio 3.8s both ease-in-out;
 }
