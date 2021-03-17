@@ -5,6 +5,7 @@ div.containerInicio {
     height: 100vh;
     background-size: cover !important;
     background-position: left, top !important;
+    position: relative;
 }
 
 div.containerInicio div.title {
