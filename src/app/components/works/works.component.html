@@ -3,19 +3,35 @@
         <h1 id="Trabajos">Trabajos</h1>
         <article>
             <div *ngFor="let work of orderWorks">
-                <div class="work" [ngStyle]="{'backgroundImage':'url('+work.imgFirst+')'}">
+                <div id={{work.id}} data-id="hola"  class="work" [ngStyle]="{'backgroundImage':'url('+work.imgFirst+')'}"
+                    (mouseenter)="enterMouse($event)" (mouseleave)="outMouse($event)">
                     <div>
-                        <h3>{{work.title}}</h3>
-                        <ul>
-                            <li *ngIf="work.site != ''"><a href="{{work.site}}" target="_blank"
-                                    rel="noopener noreferrer"><i class="fas fa-globe"></i>Visitar</a></li>
-                            <li *ngIf="work.githubFrontLink != ''"><a href="{{work.githubFrontLink}}" target="_blank"
-                                    rel="noopener noreferrer"><i class="fab fa-github"></i>{{work.githubFront}}</a></li>
-                            <li *ngIf="work.githubBackLink != ''"><a href="{{work.githubBacktLink}}" target="_blank"
-                                    rel="noopener noreferrer"><i class="fab fa-github"></i>{{work.githubBack}}</a></li>
-                        </ul>
+                        <div>
+                            <button (click)="closeWork($event)"><i class="fas fa-times"></i></button>
+                            <h3>{{work.title}}</h3>
+                            <h5>{{work.type}}</h5>
+                            <ul>
+                                <li *ngFor="let technologie of work.technologies">{{technologie}}</li>
+                            </ul>
+                            <ul class="description">
+                                <li *ngFor="let parrafo of work.description">{{parrafo}}</li>
+                            </ul>
+                            <ul class="listLinks">
+                                <li *ngIf="work.site != ''"><a href="{{work.site}}" target="_blank"
+                                        rel="noopener noreferrer"><i class="fas fa-globe"></i>Visitar</a></li>
+                                <li *ngIf="work.githubFrontLink != ''"><a href="{{work.githubFrontLink}}"
+                                        target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-github"></i>{{work.githubFront}}</a></li>
+                                <li *ngIf="work.githubBackLink != ''"><a href="{{work.githubBacktLink}}" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-github"></i>{{work.githubBack}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div >
+                    <div class="imgWorks">
+                        <img *ngFor="let img of work.img" src="{{img}}" alt="">
                     </div>
-
+                    <button (click)="openWorK($event)"><i class="fas fa-plus"></i></button>
                 </div>
             </div>
         </article>

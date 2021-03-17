@@ -12,6 +12,7 @@ div.containerWorks section article {
     display: flex;
     flex-wrap: wrap;
     padding: 40px;
+    position: relative;
 }
 div.containerWorks section article>div {
     width: 100%;
@@ -26,42 +27,122 @@ div.containerWorks section article>div>div.work {
     transition: .4s ease-in-out;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.359);
-    position: relative;
+    position: relative; 
 }
-div.containerWorks section article>div>div.work:hover {
-    background-color: rgba(20, 76, 196, 0.763);
+div.containerWorks section article>div>div.work button:first-child {
+    color: var(--colorWhite);
+    background: none;
+    border: 0;
+    line-height: normal;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: translateX(50%);
+    display: none;
 }
-div.containerWorks section article>div>div.work>div {
+div.containerWorks section article>div>div.work.openWork button:first-child {
+    display: block;
+}
+div.containerWorks section article>div>div.work button:first-child:hover {
+    cursor: pointer;
+}
+div.containerWorks section article>div>div.work h5, 
+div.containerWorks section article>div>div.work  ul,
+div.containerWorks section article>div>div.work div.imgWorks {
+    display: none;
+}
+div.containerWorks section article>div>div.work.openWork h5, 
+div.containerWorks section article>div>div.work.openWork  ul,
+div.containerWorks section article>div>div.work.openWork div.imgWorks {
+    display: block;
+}
+div.containerWorks section article>div>div.work.openWork {
+    height: auto;
+    position: sticky;
+    left: 0;
+    top: 0;
+    border-radius: var(--borderRadius);
+    z-index: 100;
+}
+div.containerWorks section article>div>div.work.openWork h5 {
+    font-size: .6em;
+}
+div.containerWorks section article>div>div.work.openWork ul:nth-child(4) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+div.containerWorks section article>div>div.work.openWork ul:nth-child(3)>li {
+    margin: 10px;
+}
+
+
+div.containerWorks section article>div>div.work>div:first-child {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .3 ease-in-out;
 }
-div.containerWorks section article>div>div.work div h3 {
+div.containerWorks section article>div>div.work>div:first-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3 ease-in-out;
+}
+div.containerWorks section article>div>div.work.openWork>div:first-child {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    
+}
+div.containerWorks section article>div>div.work.openWork li {
+    margin: 10px 10px;
+}
+div.containerWorks section article>div>div.work.openWork ul.listLinks li {
+    margin: 20px 0;
+}
+
+div.containerWorks section article>div>div.work.openWork ul.listLinks li a:hover {
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+div.containerWorks section article>div>div.work.openWork div.imgWorks img {
+    margin: 30px 0;
+}
+div.containerWorks section article>div>div.work div:first-child h3 {
     margin-bottom: 30px;
     font-size: 1.9em;
     font-weight: bold;
 }
-div.containerWorks section article>div>div.work div ul {
-    /* display: none; */
+div.containerWorks section article>div>div.work>button {
+    color: var(--colorWhite);
+    background: none;
+    border: 0;
+    line-height: normal;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
 }
-div.containerWorks section article>div>div.work div ul li {
-    font-size: 1.3em;
-    font-weight:500;
-    margin-bottom: 20px;
+div.containerWorks section article>div>div.work.openWork>button {
+   display: none;
+}
+div.containerWorks section article>div>div.work>button:hover{
+    cursor: pointer;
 }
 
-div.containerWorks section article>div>div.work div ul li i{
-   margin-right: 6px; 
-}
 
 @media(min-width: 600px) {
     div.containerWorks section article>div {
         width: 50%;
     }
 }
-@media(min-width: 720px) {
+@media(min-width: 1000px) {
     div.containerWorks section article>div {
         width: 33.333%;
     }
