@@ -10,66 +10,68 @@ import { WorksService } from 'src/app/services/works.service';
 export class WorksComponent implements OnInit {
   works: any[];
   orderWorks: any[];
-  colors: string[];
-  $elements: any;
-  $divBackground: any;
-  $idDivBackground: number;
-  valueBtnViewWork: boolean;
-  $elementOpenWork: any;
-  $idElementOpenWork: number;
  
+ 
+  $containerSelectHover: any;
+  $idContainerSelectHover: number;
+  $containerClick: any;
+  $idContainerClick: number;
+  color: string;
 
-  constructor(private WorksServices: WorksService, private ColorsService: ColorsService) {
+  constructor(private WorksServices: WorksService) {
     this.works = [];
     this.orderWorks = [];
-    this.$elements = [];
-    this.colors = [];
-    this.valueBtnViewWork = false;
+    this.color = "rgb(220, 4, 0)"
   }
 
   async ngOnInit() {
     this.works = await this.WorksServices.getAll();
-    this.colors = await this.ColorsService.getAllColors();
-
-    
-    setTimeout(() => {
-      this.$elements = document.querySelectorAll("div.containerWorks>section>article>div>div.work");
-    }, 2000);
     this.orderWorks = this.works.sort((a, b) => {
       return b.id - a.id;
     });
-    
+
   }
 
   enterMouse(event) {
-    // this.$divBackground = event.target;
-    // this.$idDivBackground = event.target.id;
-    // this.$divBackground.classList.add("open");
-    // if (this.valueBtnViewWork != true) {
-    //   this.$divBackground.style.backgroundColor = this.colors[this.$idDivBackground];
-    // }
+    this.$containerSelectHover = event.target;
+    this.$idContainerSelectHover = event.target.id;
+
+    for (let i = 0; i < this.$containerSelectHover.classList.length; i++) {
+      if (this.$containerSelectHover.classList[i] == "openWork") {
+        this.$containerSelectHover.style.backgroundColor = "rgba(0, 0, 0)";
+        this.$containerSelectHover.style.backgroundImage = "initial";
+      } else {
+        this.$containerSelectHover.style.backgroundColor = this.color;
+      }
+    }
   }
-  outMouse(){
-    // if (this.valueBtnViewWork != true) {
-    //   this.$divBackground.style.backgroundColor = "rgba(0, 0, 0, 0.359)";
-    // }
-    
+
+
+  outMouse(event) {
+    this.$containerSelectHover = event.target;
+    for (let i = 0; i < this.$containerSelectHover.classList.length; i++) {
+      if (this.$containerSelectHover.classList[i] != "openWork") {
+        this.$containerSelectHover.style.backgroundColor = "rgba(0, 0, 0, 0.496)"
+      }
+    }
   }
+
   openWorK(event) {
-    // console.log(event.target.parentNode.parentNode);
-    // this.$elementOpenWork = event.target.parentNode.parentNode;
-    // this.$idElementOpenWork = event.target.parentNode.parentNode.id;
-    // this.$elementOpenWork.style.backgroundColor = "black";
-    // this.valueBtnViewWork = !this.valueBtnViewWork;
-    // this.$divBackground.classList.add("openWork");
-    
+    this.$containerClick = event.target.parentNode.parentNode;
+    this.$idContainerClick = event.target.parentNode.parentNode.id;
+    this.$containerClick.style.backgroundColor = "black";
+    this.$containerClick.style.backgroundImage = "none";
+    this.$containerClick.classList.add("openWork");
   }
-  closeWork(event)  {
-    // console.log("entra");
-    // console.log(event.target.parentNode.parentNode.parentNode.parentNode);
-    // this.$divBackground.classList.remove("openWork");
-    // this.$divBackground.style.backgroundColor = this.colors[this.$idDivBackground];
-    
-    
+  closeWork(event) {
+    this.$containerClick = event.target.parentNode.parentNode.parentNode.parentNode;
+    let id = 0;
+    id = this.$containerClick.id;
+    this.$containerClick.classList.remove("openWork");
+    this.$containerClick.style.backgroundColor = this.color;
+    let result = this.orderWorks.filter(el => el.id == id);
+    ;
+    let backgroundImage = result[0].imgFirst;
+    this.$containerClick.style.backgroundImage = "url("+backgroundImage+")" ;
   }
 }

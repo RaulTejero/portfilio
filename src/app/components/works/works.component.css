@@ -24,20 +24,21 @@ div.containerWorks section article>div>div.work {
     border-radius: 10px;
     height: 300px;
     padding: 10px;
-    transition: .4s ease-in-out;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.359);
+    transition: .8s ease-in-out;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.496);
     position: relative; 
 }
 div.containerWorks section article>div>div.work button:first-child {
     color: var(--colorWhite);
+    font-size: 1.2em;
     background: none;
     border: 0;
     line-height: normal;
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
     transform: translateX(50%);
     display: none;
 }
@@ -56,14 +57,18 @@ div.containerWorks section article>div>div.work.openWork h5,
 div.containerWorks section article>div>div.work.openWork  ul,
 div.containerWorks section article>div>div.work.openWork div.imgWorks {
     display: block;
+    animation: openWork 3s ease-in-out;
 }
 div.containerWorks section article>div>div.work.openWork {
     height: auto;
     position: sticky;
     left: 0;
-    top: 0;
+    top: 100px;
     border-radius: var(--borderRadius);
     z-index: 100;
+}
+div.containerWorks section article>div>div.work.openWork h3 {
+    margin-top: 30px;
 }
 div.containerWorks section article>div>div.work.openWork h5 {
     font-size: .6em;
@@ -106,7 +111,9 @@ div.containerWorks section article>div>div.work.openWork li {
 div.containerWorks section article>div>div.work.openWork ul.listLinks li {
     margin: 20px 0;
 }
-
+div.containerWorks section article>div>div.work.openWork ul.listLinks li a i {
+    margin-right: 7px;
+}
 div.containerWorks section article>div>div.work.openWork ul.listLinks li a:hover {
     cursor: pointer;
     text-decoration-line: underline;
@@ -121,6 +128,7 @@ div.containerWorks section article>div>div.work div:first-child h3 {
 }
 div.containerWorks section article>div>div.work>button {
     color: var(--colorWhite);
+    font-size: 1.2em;
     background: none;
     border: 0;
     line-height: normal;
@@ -135,6 +143,12 @@ div.containerWorks section article>div>div.work.openWork>button {
 div.containerWorks section article>div>div.work>button:hover{
     cursor: pointer;
 }
+@keyframes openWork {
+    0% {
+        opacity: 0;
+    }
+}
+
 
 
 @media(min-width: 600px) {
