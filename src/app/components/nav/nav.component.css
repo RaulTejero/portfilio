@@ -190,7 +190,6 @@ div.containerNav.open div.header div.containerNavbar ul li a:hover {
     }
     50% {
         background-color: var(--backColor);
-       
     }
     95% {
          height: 100vh;
@@ -199,11 +198,11 @@ div.containerNav.open div.header div.containerNavbar ul li a:hover {
 
 @keyframes blocked {
     0% {
-        color: var(--backColor);
+        color: rgba(0, 0, 0, 0);
         transform: translateY(-100vh);
     }
     50% {
-        color: var(--backColor);
+        color: rgba(0, 0, 0, 0);
     }
 }
 

@@ -23,8 +23,6 @@ export class TechnologiesComponent implements OnInit {
   enter(event) {
     this.$elementsNameTechnologie = event.target.childNodes;
     this.$elementsNameTechnologie[0].style.display = "block";
-    console.log("enter");
-    
   }
   
   out() {

@@ -8,24 +8,19 @@ div.wrapper section.padding {
 }
 
 div.animation {
-    animation: inicio 3.8s both ease-in-out;
+    animation: inicio 8s both ease-in-out;
 }
 
 @keyframes inicio {
     0% {
         opacity: 0;
         transform: translateY(150px);
-       
-        
-    }90% {
+    }80% {
         opacity: 0;
         transform: translateY(150px);
-
     }
-   
     100% {
-        opacity: 1;
-        
+        opacity: 1;   
     }
 }
 

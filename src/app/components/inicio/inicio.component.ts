@@ -40,7 +40,7 @@ export class InicioComponent implements OnInit {
         }, 200);
 
       }, 500);
-    }, 3000);
+    }, 7000);
 
 
 
