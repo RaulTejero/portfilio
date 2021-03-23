@@ -27,10 +27,12 @@ div.containerFooter>div:nth-child(2) nav, div.containerFooter>div:nth-child(3) n
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 50px;
+    margin-bottom: 50px;
     
 }
-
+div.containerFooter>div:nth-child(2) nav {
+    flex-direction: column;
+}
 div.containerFooter>div:nth-child(2) nav a i, div.containerFooter>div:nth-child(3) nav a i {
     margin-right: 10px;
     vertical-align: middle;
@@ -51,15 +53,25 @@ div.containerFooter>p:last-child {
     font-size: 10px;
 }
 
+@media (min-width: 600px) {
+    div.containerFooter>div:nth-child(2) nav {
+        flex-direction: row;
+          
+      }
+ }
 @media (min-width: 900px) {
     div.containerFooter>div:nth-child(2) {
         width: 55%;
     }
     div.containerFooter>div:nth-child(3) {
-        width: 45%;
+        width: 35%;
     }
      div.containerFooter>div:nth-child(3) nav {
         flex-direction: column;
         text-align: left;
+        
+    }
+    div.containerFooter>div:nth-child(3) nav {
+        margin-left: 50px;
     }
 }

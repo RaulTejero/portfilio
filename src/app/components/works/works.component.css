@@ -11,7 +11,7 @@ div.containerWorks section h1 {
 div.containerWorks section article {
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 10px;
     position: relative;
 }
 div.containerWorks section article>div {
