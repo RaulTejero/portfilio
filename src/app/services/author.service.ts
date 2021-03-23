@@ -18,4 +18,21 @@ export class AuthorService {
     let result = this.Httpclient.get<string>(url + "author/roll.json").toPromise();
     return result;
   }
+
+ getContact(): Promise<any> {
+   let result = this.Httpclient.get<any>(url+"author/contact.json").toPromise();
+   return result; 
+ }
+ getSocial(): Promise<any> {
+   let result = this.Httpclient.get<any>(url+"author/social.json").toPromise();
+   return result; 
+ }
+ getPhoto(): Promise<any> {
+   let result = this.Httpclient.get<any>(url+"author/photo.json").toPromise();
+   return result; 
+ }
+ getCV(): Promise<any> {
+   let result = this.Httpclient.get<any>(url+"author/cv.json").toPromise();
+   return result; 
+ }
 }

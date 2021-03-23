@@ -6,6 +6,9 @@ div.wrapper {
 div.wrapper section.padding {
     padding: 0 50px;
 }
+div.wrapper section.works {
+    margin-bottom: 100px
+}
 
 div.animation {
     animation: inicio 8s both ease-in-out;

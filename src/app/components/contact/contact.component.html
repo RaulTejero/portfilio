@@ -1,1 +1,21 @@
-<h2>contact</h2>
+
+<div id="Contacto" class="containerFooter">
+    <h2>Contacto</h2>
+    <div>
+        <nav>
+            <a *ngFor="let social of socials" href={{social.url}} target="_blank">
+                <i class={{social.classFontAwesome}}></i>{{social.name}}
+            </a>
+        </nav>
+    </div>
+    <div>
+        <nav>
+            <a href="mailto:{{contact.mail}}"target="_blank"><i class="fas fa-envelope"></i>{{contact.mail}}</a>
+            <a href="tel:{{contact.tel}}" target="_blank"><i class="fas fa-phone"></i>{{contact.tel}} </a>
+        </nav>
+    </div>
+    <div>
+        <a  download="curriculumRaulTejero" target="_blank" href={{cv}}>Dercargar CV en <i class="far fa-file-pdf"></i></a>
+   </div>
+    <p>&copy;RaulTejero 2021</p>
+</div>
